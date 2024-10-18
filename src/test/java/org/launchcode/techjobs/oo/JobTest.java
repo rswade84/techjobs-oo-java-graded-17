@@ -1,23 +1,17 @@
 package org.launchcode.techjobs.oo;
-
 import org.junit.Test;
-
 import static org.junit.Assert.*;
-
-
 
 public class JobTest {
     //TODO: Create your unit tests here
 
     // Task 4
-
     @Test
     public void testSettingJobId() {
         Job jobOne = new Job();
         Job jobTwo = new Job();
         assertNotEquals(jobOne.getId(), jobTwo.getId()); // Compare the Id's, not objects...
     }
-
 
     @Test
     public void testJobConstructorSetsAllFields() {
@@ -59,4 +53,20 @@ public class JobTest {
         assertFalse(firstJob.equals(secondJob));
     }
 
+    // Task 5: Build toString method
+    @Test
+    public void testToStringStartsAndEndsWithNewLine() {
+        Job testJobField = new Job("Product tester",
+                new Employer("ACME"),
+                new Location("Desert"),
+                new PositionType("Quality control"),
+                new CoreCompetency("Persistence"));
+
+        String jobString = testJobField.toString();
+        String expectedStartAndEnd = System.lineSeparator(); // This creates a new line...
+
+        // Check this its starts and ends with a newline
+        assertEquals(expectedStartAndEnd, jobString.substring(0, expectedStartAndEnd.length()));
+        assertEquals(expectedStartAndEnd, jobString.substring(jobString.length() - expectedStartAndEnd.length()));
     }
+}
