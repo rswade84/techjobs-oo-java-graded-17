@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class JobTest {
     //TODO: Create your unit tests here
 
-    // Task 4:
+    // Task 4
 
     @Test
     public void testSettingJobId() {
