@@ -65,7 +65,6 @@ public class Job {
     // Task 5: Custom toString method
     @Override
     public String toString() {
-
         // Initialize field values or set them to "Data not available" if empty or null
         String nameField = (name == null || name.isEmpty()) ? "Data not available" : name;
         String employerField = (employer == null || employer.getValue().isEmpty()) ? "Data not available" : employer.getValue();
@@ -73,6 +72,16 @@ public class Job {
         String positionTypeField = (positionType == null || positionType.getValue().isEmpty()) ? "Data not available" : positionType.getValue();
         String coreCompetencyField = (coreCompetency == null || coreCompetency.getValue().isEmpty()) ? "Data not available" : coreCompetency.getValue();
 
+        // Check if all fields are empty, except for id...
+        if (nameField.equals("Data not available") &&
+                employerField.equals("Data not available") &&
+                locationField.equals("Data not available") &&
+                positionTypeField.equals("Data not available") &&
+                coreCompetencyField.equals("Data not available")) {
+            return "OOPS! This job does not seem to exist.";
+        }
+
+        // Return formatted string with all fields for the toString method...
         return System.lineSeparator() +
                 "ID: " + id + System.lineSeparator() +
                 "Name: " + nameField + System.lineSeparator() +
@@ -81,7 +90,4 @@ public class Job {
                 "Position Type: " + positionTypeField + System.lineSeparator() +
                 "Core Competency: " + coreCompetencyField + System.lineSeparator();
     }
-
-
-
 }

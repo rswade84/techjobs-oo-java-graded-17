@@ -8,7 +8,7 @@ public abstract class JobField {
     private static int nextId = 1;
     private String value;
 
-    // Constructor that initializes a uniquie id...
+    // Constructor that initializes a unique id...
     public JobField() {
         this.id = nextId;
         nextId++;
@@ -21,15 +21,10 @@ public abstract class JobField {
     }
 
     // Getters and Setters...
-    public int getId() {
-        return id;
-    }
-    public String getValue() {
-        return value;
-    }
-    public void setValue(String value) {
-        this.value = value;
-    }
+    // NOTE: setValue is never used in this project...
+    public int getId() {  return id;  }
+    public String getValue() {  return value;  }
+    public void setValue(String value) {  this.value = value;  }
 
     // Custom Methods: equals, hashCode, toString
     @Override
@@ -41,13 +36,8 @@ public abstract class JobField {
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
+    public int hashCode() {  return Objects.hash(id);  }
 
     @Override
-    public String toString() {
-        return value;
-    }
-
+    public String toString() {  return value;  }
 }

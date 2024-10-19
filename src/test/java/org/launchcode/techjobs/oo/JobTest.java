@@ -109,4 +109,12 @@ public class JobTest {
         assertEquals(expectedOutput, testEmptyFields.toString());
     }
 
+    @Test
+    public void testToStringHandlesOnlyIdField() {
+        Job onlyIdField = new Job(); // I left field empty so that it has no fields set
+
+        String expectedOutput = "OOPS! This job does not seem to exist.";
+
+        assertEquals(expectedOutput, onlyIdField.toString());
+    }
 }
