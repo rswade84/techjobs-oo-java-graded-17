@@ -54,7 +54,7 @@ public class Job {
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
 
-    // Task 3: Getters and Setters...
+    // Task 3: Getters and Setters
     public String getName() {
         return name;
     }

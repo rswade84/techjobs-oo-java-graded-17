@@ -26,7 +26,7 @@ public abstract class JobField {
     public String getValue() {  return value;  }
     public void setValue(String value) {  this.value = value;  }
 
-    // Custom Methods: equals, hashCode, toString
+    // Custom Methods: equals, hashCode, toString...
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
