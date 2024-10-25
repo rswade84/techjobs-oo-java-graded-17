@@ -11,7 +11,6 @@ import java.lang.reflect.Method;
 
 import static java.lang.System.lineSeparator;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 /**
@@ -37,9 +36,10 @@ public class TestTaskFive extends AbstractTest {
     @Test
     public void testToStringStartsAndEndsWithNewLine() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Job job = createJob("Web Developer", "LaunchCode", "StL", "Back-end developer", "Java");
-        
-        assertTrue(job.toString().startsWith(lineSeparator()));
-        assertTrue(job.toString().endsWith(lineSeparator()));
+        String firstChar = String.valueOf(job.toString().charAt(0));
+        String lastChar = String.valueOf(job.toString().charAt(job.toString().length()-1));
+        assertEquals(firstChar, lineSeparator());
+        assertEquals(lastChar, lineSeparator());
     }
 
     @Test
