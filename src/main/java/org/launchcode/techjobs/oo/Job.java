@@ -3,6 +3,7 @@ package org.launchcode.techjobs.oo;
 import java.util.Objects;
 
     // Represents a complete job listing
+    // Creates instances of the child / subclasses (Name, Employer, Location, PositionType, & CoreCompentency)
     // Includes instances of subclasses
 public class Job {
 
