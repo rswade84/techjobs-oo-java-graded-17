@@ -2,6 +2,7 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
+    // This is the base class, contains core fields and methods
 public abstract class JobField {
 
     private int id;

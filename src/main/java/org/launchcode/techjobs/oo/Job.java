@@ -2,11 +2,14 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
+    // Represents a complete job listing
+    // Includes instances of subclasses
 public class Job {
 
     private int id;
     private static int nextId = 1;
 
+    //
     private String name;
     private Employer employer;
     private Location location;
@@ -18,6 +21,7 @@ public class Job {
     //  the 'id' field.
 
     // Task 3 - #1
+    // Sets unique ID for each job and increments
     public Job() {
         this.id = nextId;
         nextId++;

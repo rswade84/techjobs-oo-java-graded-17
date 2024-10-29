@@ -16,20 +16,20 @@ public class JobTest {
 
     @Test
     public void testJobConstructorSetsAllFields() {
-        Job testJobConstructor = new Job("Product tester",
-                new Employer("ACME"),
-                new Location("Desert"),
-                new PositionType("Quality control"),
-                new CoreCompetency("Persistence"));
+        Job testJobConstructor = new Job("Product tester", // example job title
+                new Employer("ACME"), // example employer
+                new Location("Desert"), // example location
+                new PositionType("Quality control"), // example position type
+                new CoreCompetency("Persistence")); // example core competency
 
-        // Check field values
+        // Check field values correctly sets all fields with values
         assertEquals("Product tester", testJobConstructor.getName());
         assertEquals("ACME", testJobConstructor.getEmployer().getValue());
         assertEquals("Desert", testJobConstructor.getLocation().getValue());
         assertEquals("Quality control", testJobConstructor.getPositionType().getValue());
         assertEquals("Persistence", testJobConstructor.getCoreCompetency().getValue());
 
-        // Check field types
+        // Checks if field types are correct data type
         assertTrue(testJobConstructor.getName() instanceof String);
         assertTrue(testJobConstructor.getEmployer() instanceof Employer);
         assertTrue(testJobConstructor.getLocation() instanceof Location);
